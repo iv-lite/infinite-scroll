@@ -1,0 +1,42 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.container div {
+    background-color: blue;
+    min-width: 100%;
+    height: 100%;
+}
+
+#item-0 {
+    background-color: aliceblue;
+}
+
+#item-1 {
+    background-color: aqua;
+}
+
+#item-2 {
+    background-color: brown;
+}
+
+#item-3 {
+    background-color: darkblue;
+}
