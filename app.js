@@ -22,13 +22,21 @@ const append = () => {
 };
 
 const prepend = () => {
-    if(isOverTreshold(container.scrollLeft))
+    if(container.scrollLeft > 0)
         return;
 
-    console.log('prepending');
+    const childrens = container.querySelectorAll('div');
+    const min = Math.ceil(childrens.length / 2.0);
+    const childs = [...childrens].slice(min).reverse();
+
+    requestAnimationFrame(() => {
+        for (const children of childs) {
+            children.remove();
+            container.prepend(children);
+        }
+        container.scrollLeft = scrollWidth / 2;
+    });
 };
 
-if(isUnderTreshold(container.scrollLeft))
-    container.addEventListener('scroll', append);
-else
-    container.addEventListener('scroll', prepend);
+container.addEventListener('scroll', append);
+container.addEventListener('scroll', prepend);
