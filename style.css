@@ -18,16 +18,25 @@ body {
 
 .container {
     width: 100%;
-    height: 40%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
+    align-items: center;
 }
 
 .container div {
     background-color: blue;
     min-width: 100%;
-    height: 100%;
+    height: 50%;
+}
+
+.container div.top {
+    align-self: flex-start;
+}
+
+.container div.bottom {
+    align-self: center;
 }
 
 #item-0 {
